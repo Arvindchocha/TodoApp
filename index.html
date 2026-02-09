@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Custom Config (CDN way) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        themeColor: '#ff5845',
+                        themeText: '#173d75',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <section class="bg-gradient-to-l from-[#222a72] to-[#3a1968] h-screen flex items-center justify-center">
+        <div class="max-w-[600px] w-full bg-white shadow p-6 rounded">
+            <h1 class="text-themeText text-4xl font-bold mb-6">
+                To-Do List
+            </h1>
+
+            <form action="" id="addTask" class="bg-[#edeef0] rounded-full overflow-hidden flex mb-6 items-center h-12">
+                <input type="text" placeholder="Add a new task..." class="w-full h-full px-5 text-lg focus:outline-none bg-transparent" id="taskInput">
+                <button type="submit" class="min-w-[120px] bg-themeColor text-white py-2 rounded-full hover:bg-[#e04a37] transition duration-200">
+                    Add Task
+                </button>
+            </form>
+
+            <div id="taskList">
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
